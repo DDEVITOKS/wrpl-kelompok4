@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block title %} Profile {% endblock %}
+
+{% block body %}
+
+<!-- <div class="container">
+    <div class="starter-template">
+    <h1>Profile</h1>
+    <table class="table table-striped">
+    <thead>
+    <tr>   
+    <td>Nama</td>
+    <td>Email</td>
+    </tr>
+    </thead>
+    <tbody>
+   {% for row in user %}
+    <tr>
+    <td>{{ row.1 }}</td>
+    <td>{{ row.2 }}</td>
+    </tr>
+   {% endfor %}
+   
+   
+    </tbody>
+   
+   
+    </table>
+   
+   
+    </div>
+   </div> -->
+   <div class="contentbar">
+                    <h1>Profile</h1> 
+                     {% block content %}
+                     <img src="static\img\profile.png" alt="Avatar" class="avatar">
+                        <div class="border">
+                            <table class="worddark">
+                                <tr>
+                                    <td>Name:</td>
+                                    <td>{{ session['name'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email ID:</td>
+                                    <td>{{ session['email'] }}</td>
+                                </tr>                        
+                            </table>
+                        </div>
+                    {% endblock %}                                           
+                </div>
+   
+   
+   
+   
+   
+   <!-- /.container -->
+   
+   
+{% endblock %}
+   
+

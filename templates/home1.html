@@ -1,0 +1,91 @@
+{% extends 'layout.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+
+<div class="container">
+
+
+
+
+ <div class="starter-template">
+
+
+ <h1>Daftar Produk</h1>
+
+
+
+
+ <table class="table table-striped">
+
+
+ <thead>
+
+
+ <tr>
+
+
+ <td>No</td>
+
+
+ <td>Nama</td>
+ <td>Deskripsi</td>
+ <td>Harga</td>
+ <td>image</td>
+ 
+ <td>tanggal</td>
+
+
+ </tr>
+
+
+ </thead>
+
+
+ <tbody>
+
+
+
+
+ <tr>
+
+
+ <td>{{ products[0] }}</td>
+
+
+ <td><a href="/product/{{products[0]}}">{{ products[1] }}</a></td>
+
+ <td>{{ products[2]}}</td>
+ <td>{{ products[3] }}</td>
+ <td><a href="/product/{{products[0]}}"> <img src="{{ products[4] }}" width=100%  /> </a></td>
+ <td>{{ products[5] }}</td>
+
+
+
+
+ </tr>
+
+
+
+
+
+ </tbody>
+
+
+ </table>
+
+
+ </div>
+
+
+
+
+</div>
+
+
+<!-- /.container -->
+
+
+{% endblock %}
